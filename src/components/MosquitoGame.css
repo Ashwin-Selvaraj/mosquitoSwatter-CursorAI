@@ -1,0 +1,49 @@
+.game-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #87CEEB;
+}
+
+.score {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mosquito {
+  position: absolute;
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: fly 2s infinite alternate;
+  user-select: none;
+}
+
+.mosquito:hover {
+  transform: scale(1.2);
+}
+
+.mosquito:active {
+  transform: scale(0.9);
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(5px, -5px) rotate(5deg);
+  }
+  100% {
+    transform: translate(10px, 10px) rotate(10deg);
+  }
+} 
